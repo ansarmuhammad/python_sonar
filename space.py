@@ -2,14 +2,33 @@ import pandas as pd
 from ydata_profiling import ProfileReport
 
 
-# ficticious cyclomatic complexity
-def fictitious_function(x, y, z):
+#intentional duplicate to check sonar
+def fictitious_function_duplicate(x, y, z, a):
     if x > 0:
         print("X is positive.")
         if y > 0:
             print("Y is positive.")
             if z > 0:
                 print("Z is positive.")
+                if a > 0:
+                    print("A is positive.")
+        elif y < 0:
+            print("Y is non-positive.")
+    elif x < 0:
+        print("X is negative.")
+    else:
+        print("X is zero.")
+
+# ficticious cyclomatic complexity
+def fictitious_function(x, y, z, a):
+    if x > 0:
+        print("X is positive.")
+        if y > 0:
+            print("Y is positive.")
+            if z > 0:
+                print("Z is positive.")
+                if a > 0:
+                    print("A is positive.")
         elif y < 0:
             print("Y is non-positive.")
     elif x < 0:
@@ -41,5 +60,6 @@ profile.to_file("d:/python-projects/myfile.html")
 
 print("Please find the updated file at d:/python-projects/myfile.html")
 
-fictitious_function(1, 1, 1)
+fictitious_function(1, 1, 1, 1)
 
+fictitious_function_duplicate(1, 1, 1, 1)
