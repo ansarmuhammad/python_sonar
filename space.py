@@ -8,8 +8,6 @@ def fictitious_function(x, y, z):
         print("X is positive.")
         if y > 0:
             print("Y is positive.")
-        elif y > 0:
-            print("Y is positive.")
             if z > 0:
                 print("Z is positive.")
         elif y < 0:
@@ -44,3 +42,4 @@ profile.to_file("d:/python-projects/myfile.html")
 print("Please find the updated file at d:/python-projects/myfile.html")
 
 fictitious_function(1, 1, 1)
+
